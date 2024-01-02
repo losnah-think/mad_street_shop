@@ -7,7 +7,7 @@ const mongooseDb = () => {
   function connect() {
     mongoose
       .connect(
-        `${env.dialect}://${env.username}:${env.password}@${env.host}:${env.port}/${env.dbname}`,
+        `${env.dialect}://${env.username}:${env.password}@${env.host}/${env.dbname}`,
         {
           useNewUrlParser: true,
           useUnifiedTopology: true,
