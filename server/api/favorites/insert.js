@@ -20,7 +20,6 @@ async function insert(req, res) {
     arr.push(shopId);
     user.favoriteShops = arr;
     user.save();
-    //TODO: User의 favoriteShop 리스트에 확인해서 없으면 추가한다.
     logger.log(`before add likeScore : ${isShop.likeScore}`);
     await Shops.findOneAndUpdate(
       { _id: shopId },
